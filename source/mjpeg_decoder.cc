@@ -32,7 +32,7 @@ struct FILE;  // For jpeglib.h.
 extern "C" {
 #endif
 
-#include <jpeglib.h>
+//#include <jpeglib.h>
 
 #ifdef __cplusplus
 }  // extern "C"

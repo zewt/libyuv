@@ -26,7 +26,7 @@ extern "C" {
 static __inline int Abs(int v) {
   return v >= 0 ? v : -v;
 }
-
+#if 0
 // Any I4xx To I420 format with mirroring.
 static int I4xxToI420(const uint8_t* src_y,
                       int src_stride_y,
@@ -255,6 +255,7 @@ int I422ToNV21(const uint8_t* src_y,
   free_aligned_buffer_64(plane_u);
   return 0;
 }
+#endif
 
 #ifdef I422TONV21_ROW_VERSION
 // Unittest fails for this version.
@@ -404,6 +405,7 @@ int I422ToNV21(const uint8_t* src_y,
 }
 #endif  // I422TONV21_ROW_VERSION
 
+#if 0
 // 444 chroma is 1x width, 1x height
 // 420 chroma is 1/2 width, 1/2 height
 LIBYUV_API
@@ -526,6 +528,7 @@ int I400ToNV21(const uint8_t* src_y,
   SetPlane(dst_vu, dst_stride_vu, halfwidth * 2, halfheight, 128);
   return 0;
 }
+#endif
 
 static void CopyPlane2(const uint8_t* src,
                        int src_stride_0,
@@ -569,6 +572,7 @@ static void CopyPlane2(const uint8_t* src,
   }
 }
 
+#if 0
 // Support converting from FOURCC_M420
 // Useful for bandwidth constrained transports like USB 1.0 and 2.0 and for
 // easy conversion to I420.
@@ -695,6 +699,7 @@ int M420ToI420(const uint8_t* src_m420,
                     dst_stride_y, dst_u, dst_stride_u, dst_v, dst_stride_v,
                     width, height);
 }
+#endif
 
 // Convert YUY2 to I420.
 LIBYUV_API
@@ -2094,6 +2099,7 @@ static void SplitPixels(const uint8_t* src_u,
   }
 }
 
+#if 0
 // Convert Android420 to I420.
 LIBYUV_API
 int Android420ToI420(const uint8_t* src_y,
@@ -2164,6 +2170,7 @@ int Android420ToI420(const uint8_t* src_y,
   }
   return 0;
 }
+#endif
 
 #ifdef __cplusplus
 }  // extern "C"

@@ -1,3 +1,4 @@
+#if 0
 /*
  *  Copyright 2011 The LibYuv Project Authors. All rights reserved.
  *
@@ -1816,4 +1817,5 @@ int Scale(const uint8_t* src_y,
 #ifdef __cplusplus
 }  // extern "C"
 }  // namespace libyuv
+#endif
 #endif

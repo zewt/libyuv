@@ -230,6 +230,7 @@ int ConvertToI420(const uint8_t* sample,
                      dst_stride_v, crop_width, inv_crop_height);
       break;
     }
+#if 0
     case FOURCC_I444:
     case FOURCC_YV24: {
       const uint8_t* src_y = sample + src_width * crop_y + crop_x;
@@ -247,6 +248,8 @@ int ConvertToI420(const uint8_t* sample,
                      dst_stride_v, crop_width, inv_crop_height);
       break;
     }
+#endif
+
 #ifdef HAVE_JPEG
     case FOURCC_MJPG:
       r = MJPGToI420(sample, sample_size, dst_y, dst_stride_y, dst_u,

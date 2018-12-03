@@ -1,3 +1,4 @@
+#if 0
 /*
  *  Copyright 2011 The LibYuv Project Authors. All rights reserved.
  *
@@ -3880,4 +3881,5 @@ int UYVYToNV12(const uint8_t* src_uyvy,
 #ifdef __cplusplus
 }  // extern "C"
 }  // namespace libyuv
+#endif
 #endif

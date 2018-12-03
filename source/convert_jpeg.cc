@@ -59,7 +59,7 @@ static void JpegI422ToI420(void* opaque,
   dest->v += ((rows + 1) >> 1) * dest->v_stride;
   dest->h -= rows;
 }
-
+#if 0
 static void JpegI444ToI420(void* opaque,
                            const uint8_t* const* data,
                            const int* strides,
@@ -73,6 +73,7 @@ static void JpegI444ToI420(void* opaque,
   dest->v += ((rows + 1) >> 1) * dest->v_stride;
   dest->h -= rows;
 }
+#endif
 
 static void JpegI400ToI420(void* opaque,
                            const uint8_t* const* data,
@@ -103,6 +104,7 @@ int MJPGSize(const uint8_t* src_mjpg,
   return ret ? 0 : -1;  // -1 for runtime failure.
 }
 
+#if 0
 // MJPG (Motion JPeg) to I420
 // TODO(fbarchard): review src_width and src_height requirement. dst_width and
 // dst_height may be enough.
@@ -189,6 +191,7 @@ int MJPGToI420(const uint8_t* src_mjpg,
   }
   return ret ? 0 : 1;
 }
+#endif
 
 struct NV21Buffers {
   uint8_t* y;

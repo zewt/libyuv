@@ -25,6 +25,7 @@ namespace libyuv {
 extern "C" {
 #endif
 
+#if 0
 // Convert I444 to I420.
 LIBYUV_API
 int I444ToI420(const uint8_t* src_y,
@@ -41,6 +42,7 @@ int I444ToI420(const uint8_t* src_y,
                int dst_stride_v,
                int width,
                int height);
+#endif
 
 // Convert I444 to NV21.
 LIBYUV_API
